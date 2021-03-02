@@ -61,13 +61,13 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
             android:layout_marginRight="24dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
+                android:layout_marginBottom="10dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="@string/username_label"
                 android:textColor="@color/grayPrimary"
@@ -95,7 +95,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
+                android:layout_marginBottom="10dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="@string/password_label"
                 android:textColor="@color/grayPrimary"
@@ -106,7 +106,7 @@
                 android:layout_height="50dp"
                 android:background="@drawable/bg_input_edit"
                 android:fontFamily="@font/montserrat_medium"
-                android:inputType="textPassword"
+                android:inputType="text"
                 android:lines="1"
                 android:paddingLeft="12dp"
                 android:textColor="@color/blackPrimary" />
@@ -123,7 +123,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
+                android:layout_marginBottom="10dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="@string/email_label"
                 android:textColor="@color/grayPrimary"
@@ -134,7 +134,7 @@
                 android:layout_height="50dp"
                 android:background="@drawable/bg_input_edit"
                 android:fontFamily="@font/montserrat_medium"
-                android:inputType="textPassword"
+                android:inputType="text"
                 android:lines="1"
                 android:paddingLeft="12dp"
                 android:textColor="@color/blackPrimary" />
