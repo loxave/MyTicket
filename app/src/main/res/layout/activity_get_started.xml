@@ -75,6 +75,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/btn_new_account_create"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginStart="48dp"
