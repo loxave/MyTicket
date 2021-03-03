@@ -23,6 +23,6 @@ public class SplashActivity extends AppCompatActivity {
                 startActivity(gogetStarted);
                 finish();
             }
-        }, 1000); //1000 ms = 1 s
+        }, 2000); //1000 ms = 1 s
     }
 }
