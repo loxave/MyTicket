@@ -13,6 +13,7 @@
     <color name="bluePrimary">#230DD1</color>
     <color name="blueSecondary">#2595f5</color>
     <color name="grayPrimary">#5DC7C4E0</color>
+    <color name="greenPrimary">#1abc9c</color>
 
     <color name="blackPrimary">#21272c</color>
     <color name="background_primary">#EDF1F8</color>
