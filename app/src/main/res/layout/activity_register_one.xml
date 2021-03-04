@@ -106,7 +106,7 @@
                 android:layout_height="50dp"
                 android:background="@drawable/bg_input_edit"
                 android:fontFamily="@font/montserrat_medium"
-                android:inputType="text"
+                android:inputType="textPassword"
                 android:lines="1"
                 android:paddingLeft="12dp"
                 android:textColor="@color/blackPrimary" />
@@ -134,7 +134,7 @@
                 android:layout_height="50dp"
                 android:background="@drawable/bg_input_edit"
                 android:fontFamily="@font/montserrat_medium"
-                android:inputType="text"
+                android:inputType="textEmailAddress"
                 android:lines="1"
                 android:paddingLeft="12dp"
                 android:textColor="@color/blackPrimary" />
