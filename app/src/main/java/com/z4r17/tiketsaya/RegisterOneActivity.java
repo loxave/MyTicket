@@ -18,20 +18,14 @@ public class RegisterOneActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register_one);
 
         btn_continue = findViewById(R.id.btn_continue);
-        btn_continue.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent gotonextregister =  new Intent(RegisterOneActivity.this,RegisterTwoActivity.class);
-                startActivity(gotonextregister);
-            }
+        btn_continue.setOnClickListener(view -> {
+            Intent gotonextregister =  new Intent(RegisterOneActivity.this,RegisterTwoActivity.class);
+            startActivity(gotonextregister);
         });
         btn_back = findViewById(R.id.btn_back);
-        btn_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent backtosigin = new Intent(RegisterOneActivity.this, SignInActivity.class);
-                startActivity(backtosigin);
-            }
+        btn_back.setOnClickListener(view -> {
+            Intent backtosigin = new Intent(RegisterOneActivity.this, SignInActivity.class);
+            startActivity(backtosigin);
         });
     }
 }
