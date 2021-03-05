@@ -12,7 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="320dp"
         android:background="@drawable/bg_gradient_primary_blue"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -174,4 +176,5 @@
             android:layout_height="28dp"
             android:src="@drawable/ic_back" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
