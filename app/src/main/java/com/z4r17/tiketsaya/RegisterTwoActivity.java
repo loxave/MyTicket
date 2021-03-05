@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -23,7 +22,7 @@ public class RegisterTwoActivity extends AppCompatActivity {
         btn_continue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent gotosuccess = new Intent(RegisterTwoActivity.this, SuccesRegisterActivity.class);
+                Intent gotosuccess = new Intent(RegisterTwoActivity.this, SuccessRegisterActivity.class);
                 startActivity(gotosuccess);
                 finish();
             }

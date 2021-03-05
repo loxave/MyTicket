@@ -11,7 +11,7 @@
         android:theme="@style/Theme.TiketSaya">
         <activity android:name=".HomeActivity"></activity>
         <activity android:name=".MyProfileActivity" />
-        <activity android:name=".SuccesRegisterActivity" />
+        <activity android:name=".SuccessRegisterActivity" />
         <activity android:name=".RegisterTwoActivity" />
         <activity android:name=".RegisterOneActivity" />
         <activity android:name=".SignInActivity" />

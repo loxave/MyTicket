@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class SuccesRegisterActivity extends AppCompatActivity {
+public class SuccessRegisterActivity extends AppCompatActivity {
 
     Button btn_explore;
     @Override
@@ -19,7 +19,7 @@ public class SuccesRegisterActivity extends AppCompatActivity {
         btn_explore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent gotohome = new Intent(SuccesRegisterActivity.this,HomeActivity.class);
+                Intent gotohome = new Intent(SuccessRegisterActivity.this,HomeActivity.class);
                 startActivity(gotohome);
             }
         });
