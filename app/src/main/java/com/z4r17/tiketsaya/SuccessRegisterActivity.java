@@ -12,7 +12,7 @@ public class SuccessRegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_succes_register);
+        setContentView(R.layout.activity_success_register);
 
         btn_explore = findViewById(R.id.btn_explore);
         btn_explore.setOnClickListener(view -> {
