@@ -109,10 +109,11 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/photo_spot_ticket"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_regular"
-                    android:text="12 Photo Spot"
+                    android:text="5 Photo Spot"
                     android:textColor="@color/blackPrimary"
                     android:textSize="16sp" />
 
@@ -148,6 +149,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/wifi_ticket"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_regular"
@@ -187,6 +189,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/festival_ticket"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_regular"
@@ -209,6 +212,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/short_description_ticket"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -221,14 +225,14 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_continue"
+        android:id="@+id/btn_buy_ticket"
         android:layout_width="250dp"
         android:layout_height="55dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/bg_btn_blue_primary"
         android:fontFamily="@font/montserrat_medium"
-        android:text="Continue"
+        android:text="Buy Ticket"
         android:textColor="#FFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -237,13 +241,13 @@
     <LinearLayout
         android:id="@+id/btn_back"
         android:layout_width="51dp"
-        android:layout_height="56dp"
+        android:layout_height="55dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/bg_layout_white"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintEnd_toStartOf="@+id/btn_continue"
+        app:layout_constraintEnd_toStartOf="@+id/btn_buy_ticket"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <ImageView
