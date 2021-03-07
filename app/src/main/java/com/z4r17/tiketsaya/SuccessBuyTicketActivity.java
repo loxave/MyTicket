@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 public class SuccessBuyTicketActivity extends AppCompatActivity {
@@ -18,13 +17,10 @@ public class SuccessBuyTicketActivity extends AppCompatActivity {
         setContentView(R.layout.activity_success_buy_ticket);
 
         btn_my_dashboard = findViewById(R.id.btn_my_dashboard);
-        btn_my_dashboard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        btn_my_dashboard.setOnClickListener(view -> {
 
-                Intent backToDashboard = new Intent(SuccessBuyTicketActivity.this, HomeActivity.class);
-                startActivity(backToDashboard);
-            }
+            Intent backToDashboard = new Intent(SuccessBuyTicketActivity.this, HomeActivity.class);
+            startActivity(backToDashboard);
         });
 
     }
