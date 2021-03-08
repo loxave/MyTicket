@@ -9,19 +9,27 @@ import android.widget.LinearLayout;
 
 public class MyProfileActivity extends AppCompatActivity {
 
-    Button btn_back_to_home;
-    LinearLayout item_my_ticket;
 
+    LinearLayout item_my_ticket;
+    Button btn_edit_profile;
+    Button btn_sign_out;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_profile);
 
-        btn_back_to_home = findViewById(R.id.btn_back_to_home);
+        btn_sign_out = findViewById(R.id.btn_sign_out);
+        btn_edit_profile = findViewById(R.id.btn_edit_profile);
 
         item_my_ticket = findViewById(R.id.item_my_ticket);
 
-        btn_back_to_home.setOnClickListener(view -> {
+        btn_edit_profile.setOnClickListener(view -> {
+            Intent goToEditProfile = new Intent(MyProfileActivity.this, EditProfileActivity.class );
+            startActivity(goToEditProfile);
+        });
+
+
+        btn_sign_out.setOnClickListener(view -> {
             Intent goToHome =  new Intent(MyProfileActivity.this, HomeActivity.class);
             startActivity(goToHome);
         });

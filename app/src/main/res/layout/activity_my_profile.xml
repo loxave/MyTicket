@@ -43,7 +43,7 @@
             android:id="@+id/pic_photo_home_user"
             android:layout_width="92dp"
             android:layout_height="92dp"
-            android:src="@drawable/pic_dummy_angga" />
+            android:src="@drawable/aku" />
     </com.github.florent37.shapeofview.shapes.CircleView>
 
     <TextView
@@ -240,7 +240,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_view_ticket"
+        android:id="@+id/btn_edit_profile"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
@@ -257,7 +257,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
     <Button
-        android:id="@+id/btn_back_to_home"
+        android:id="@+id/btn_sign_out"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
@@ -271,6 +271,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_view_ticket" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_edit_profile" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
