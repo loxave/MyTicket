@@ -54,7 +54,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/montserrat_medium"
-        android:text="Angga Risky"
+        android:text="Gilbert Natanael"
         android:textAlignment="center"
         android:textColor="#FFF"
         android:textSize="20sp"

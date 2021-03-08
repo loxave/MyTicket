@@ -8,6 +8,8 @@
     <string name="name_label">Name</string>
     <string name="bio_label">Your Passion?</string>
     <string name="explore">Explore Now</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="we_highly_suggest_you_to_nuse_the_correct_informations">We highly suggest you to \nuse the correct informations</string>
 
 
 </resources>
