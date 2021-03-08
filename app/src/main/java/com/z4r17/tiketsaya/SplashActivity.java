@@ -17,8 +17,8 @@ public class SplashActivity extends AppCompatActivity {
         Handler handler = new Handler();
         handler.postDelayed(() -> {
             //merubah activity ke activity lain
-            Intent gogetStarted = new Intent(SplashActivity.this,GetStartedActivity.class);
-            startActivity(gogetStarted);
+            Intent goGetStarted = new Intent(SplashActivity.this,GetStartedActivity.class);
+            startActivity(goGetStarted);
             finish();
         }, 2000); //1000 ms = 1 s
     }
