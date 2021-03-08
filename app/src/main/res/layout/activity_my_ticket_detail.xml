@@ -105,11 +105,9 @@
                     android:textColor="@color/bluePrimary"
                     android:textSize="16dp" />
 
-
             </LinearLayout>
+
         </LinearLayout>
-
-
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -199,9 +197,7 @@
             android:src="@drawable/ic_barcode"
             android:layout_width="222dp"
             android:layout_height="52dp"/>
-
     </LinearLayout>
-
 
     <Button
         android:id="@+id/btn_buy_ticket"
@@ -211,7 +207,7 @@
         android:layout_marginEnd="24dp"
         android:background="@drawable/bg_btn_green_primary"
         android:fontFamily="@font/montserrat_medium"
-        android:text="Pay Now"
+        android:text="Refund Now"
         android:textColor="#FFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
