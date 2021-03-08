@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
@@ -22,20 +21,14 @@ public class MyProfileActivity extends AppCompatActivity {
 
         item_my_ticket = findViewById(R.id.item_my_ticket);
 
-        btn_back_to_home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent goToHome =  new Intent(MyProfileActivity.this, HomeActivity.class);
-                startActivity(goToHome);
-            }
+        btn_back_to_home.setOnClickListener(view -> {
+            Intent goToHome =  new Intent(MyProfileActivity.this, HomeActivity.class);
+            startActivity(goToHome);
         });
 
-        item_my_ticket.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent goToMyTickets = new Intent(MyProfileActivity.this, MyTicketDetailActivity.class);
-                startActivity(goToMyTickets);
-            }
+        item_my_ticket.setOnClickListener(view -> {
+            Intent goToMyTickets = new Intent(MyProfileActivity.this, MyTicketDetailActivity.class);
+            startActivity(goToMyTickets);
         });
     }
 }

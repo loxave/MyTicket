@@ -19,13 +19,13 @@ public class RegisterOneActivity extends AppCompatActivity {
 
         btn_continue = findViewById(R.id.btn_continue);
         btn_continue.setOnClickListener(view -> {
-            Intent gotonextregister =  new Intent(RegisterOneActivity.this,RegisterTwoActivity.class);
-            startActivity(gotonextregister);
+            Intent gotoNextRegister =  new Intent(RegisterOneActivity.this,RegisterTwoActivity.class);
+            startActivity(gotoNextRegister);
         });
         btn_back = findViewById(R.id.btn_back);
         btn_back.setOnClickListener(view -> {
-            Intent backtosigin = new Intent(RegisterOneActivity.this, SignInActivity.class);
-            startActivity(backtosigin);
+            Intent backToSignIn = new Intent(RegisterOneActivity.this, SignInActivity.class);
+            startActivity(backToSignIn);
         });
     }
 }

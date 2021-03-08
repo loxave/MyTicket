@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 public class GetStartedActivity extends AppCompatActivity {
@@ -19,21 +18,15 @@ public class GetStartedActivity extends AppCompatActivity {
         btn_sign_in = findViewById(R.id.btn_sign_in);
         btn_new_account_create = findViewById(R.id.btn_new_account_create);
 
-        btn_sign_in.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent gotosign = new Intent(GetStartedActivity.this,SignInActivity.class);
-                startActivity(gotosign);
-                //finish();
-            }
+        btn_sign_in.setOnClickListener(view -> {
+            Intent goToSignIn = new Intent(GetStartedActivity.this,SignInActivity.class);
+            startActivity(goToSignIn);
+            //finish();
         });
 
-        btn_new_account_create.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent gotoregisterone = new Intent(GetStartedActivity.this, RegisterOneActivity.class);
-                startActivity(gotoregisterone);
-            }
+        btn_new_account_create.setOnClickListener(view -> {
+            Intent gotoRegisterOne = new Intent(GetStartedActivity.this, RegisterOneActivity.class);
+            startActivity(gotoRegisterOne);
         });
     }
 }

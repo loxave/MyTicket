@@ -19,15 +19,15 @@ public class RegisterTwoActivity extends AppCompatActivity {
 
         btn_continue = findViewById(R.id.btn_continue);
         btn_continue.setOnClickListener(view -> {
-            Intent gotosuccess = new Intent(RegisterTwoActivity.this, SuccessRegisterActivity.class);
-            startActivity(gotosuccess);
+            Intent goToSuccess = new Intent(RegisterTwoActivity.this, SuccessRegisterActivity.class);
+            startActivity(goToSuccess);
             finish();
         });
 
         btn_back = findViewById(R.id.btn_back);
         btn_back.setOnClickListener(view -> {
-            Intent backtoprev = new Intent(RegisterTwoActivity.this, RegisterOneActivity.class);
-            startActivity(backtoprev);
+            Intent backToPrev = new Intent(RegisterTwoActivity.this, RegisterOneActivity.class);
+            startActivity(backToPrev);
         });
     }
 }

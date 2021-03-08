@@ -15,11 +15,14 @@ public class SplashActivity extends AppCompatActivity {
 
         //setting timer untuk 1 detik
         Handler handler = new Handler();
-        handler.postDelayed(() -> {
-            //merubah activity ke activity lain
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run(){
+                //merubah activity ke activity lain
             Intent goGetStarted = new Intent(SplashActivity.this,GetStartedActivity.class);
             startActivity(goGetStarted);
             finish();
+            }
         }, 2000); //1000 ms = 1 s
     }
 }

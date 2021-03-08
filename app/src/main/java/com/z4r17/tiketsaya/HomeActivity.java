@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.LinearLayout;
 
 import com.github.florent37.shapeofview.shapes.CircleView;
@@ -22,19 +21,13 @@ public class HomeActivity extends AppCompatActivity {
         btn_to_profile = findViewById(R.id.btn_to_profile);
         btn_ticket_pisa = findViewById(R.id.btn_ticket_pisa);
 
-        btn_to_profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent goToProfile = new Intent(HomeActivity.this,MyProfileActivity.class);
-                startActivity(goToProfile);
-            }
+        btn_to_profile.setOnClickListener(view -> {
+            Intent goToProfile = new Intent(HomeActivity.this,MyProfileActivity.class);
+            startActivity(goToProfile);
         });
-        btn_ticket_pisa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent goToPisaTicket = new Intent(HomeActivity.this, TicketDetailActivity.class);
-                startActivity(goToPisaTicket);
-            }
+        btn_ticket_pisa.setOnClickListener(view -> {
+            Intent goToPisaTicket = new Intent(HomeActivity.this, TicketDetailActivity.class);
+            startActivity(goToPisaTicket);
         });
     }
 }
