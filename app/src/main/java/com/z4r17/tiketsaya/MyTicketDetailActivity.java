@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.LinearLayout;
 
 public class MyTicketDetailActivity extends AppCompatActivity {
@@ -17,12 +16,9 @@ public class MyTicketDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_my_ticket_detail);
 
         btn_back_to_edit_profile = findViewById(R.id.btn_back_to_edit_profile);
-        btn_back_to_edit_profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent prevEditProfile = new Intent(MyTicketDetailActivity.this, MyProfileActivity.class);
-                startActivity(prevEditProfile);
-            }
+        btn_back_to_edit_profile.setOnClickListener(view -> {
+            Intent prevEditProfile = new Intent(MyTicketDetailActivity.this, MyProfileActivity.class);
+            startActivity(prevEditProfile);
         });
 
     }
