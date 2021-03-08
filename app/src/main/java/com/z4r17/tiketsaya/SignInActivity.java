@@ -21,14 +21,13 @@ public class SignInActivity extends AppCompatActivity {
         btn_new_account = findViewById(R.id.btn_new_account);
 
         btn_sign_in.setOnClickListener(view -> {
-            Intent gotohome = new Intent(SignInActivity.this,HomeActivity.class);
-            startActivity(gotohome);
+            Intent goToHome = new Intent(SignInActivity.this, HomeActivity.class);
+            startActivity(goToHome);
         });
 
         btn_new_account.setOnClickListener(view -> {
-            Intent gotoregisterone = new Intent(SignInActivity.this,RegisterOneActivity.class);
-            startActivity(gotoregisterone);
+            Intent gotoRegisterOne = new Intent(SignInActivity.this, RegisterOneActivity.class);
+            startActivity(gotoRegisterOne);
         });
     }
-
 }
