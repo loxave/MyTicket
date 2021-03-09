@@ -24,6 +24,7 @@ public class SplashActivity extends AppCompatActivity {
         // load animation
         app_splash = AnimationUtils.loadAnimation(this, R.anim.app_splash);
         bottomtothetop = AnimationUtils.loadAnimation(this, R.anim.bottomtothetop);
+
         // load element
         app_logo = findViewById(R.id.app_logo);
         app_tagLine = findViewById(R.id.app_tagLine);
