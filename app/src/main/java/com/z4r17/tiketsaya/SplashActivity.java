@@ -12,9 +12,10 @@ import android.widget.TextView;
 
 public class SplashActivity extends AppCompatActivity {
 
-    Animation app_splash, btt;
+    Animation app_splash, bottomtothetop;
     ImageView app_logo;
     TextView app_tagLine;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,14 +23,14 @@ public class SplashActivity extends AppCompatActivity {
 
         // load animation
         app_splash = AnimationUtils.loadAnimation(this, R.anim.app_splash);
-        btt = AnimationUtils.loadAnimation(this, R.anim.btt);
+        bottomtothetop = AnimationUtils.loadAnimation(this, R.anim.bottomtothetop);
         // load element
         app_logo = findViewById(R.id.app_logo);
         app_tagLine = findViewById(R.id.app_tagLine);
 
         // run animation
-        app_tagLine.startAnimation(btt);
         app_logo.startAnimation(app_splash);
+        app_tagLine.startAnimation(bottomtothetop);
 
         //setting timer untuk 2 detik
         Handler handler = new Handler();
