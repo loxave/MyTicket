@@ -83,14 +83,11 @@ public class TicketCheckoutActivity extends AppCompatActivity {
             }
         });
 
-
-
         btn_back_to_dashboard = findViewById(R.id.btn_back_to_dashboard);
         btn_back_to_dashboard.setOnClickListener(view -> {
             Intent backToDashboard = new Intent(TicketCheckoutActivity.this, HomeActivity.class);
             startActivity(backToDashboard);
         });
-
 
         btn_buy_ticket.setOnClickListener(view -> {
             Intent goToSuccessTicket = new Intent(TicketCheckoutActivity.this, SuccessBuyTicketActivity.class);

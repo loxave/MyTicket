@@ -28,7 +28,6 @@ public class MyProfileActivity extends AppCompatActivity {
             startActivity(goToEditProfile);
         });
 
-
         btn_sign_out.setOnClickListener(view -> {
             Intent goToHome =  new Intent(MyProfileActivity.this, HomeActivity.class);
             startActivity(goToHome);

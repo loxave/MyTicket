@@ -39,8 +39,8 @@ public class SuccessRegisterActivity extends AppCompatActivity {
         app_subtitle.startAnimation(toptothebottom);
 
         btn_explore.setOnClickListener(view -> {
-            Intent gotohome = new Intent(SuccessRegisterActivity.this,HomeActivity.class);
-            startActivity(gotohome);
+            Intent goToHome = new Intent(SuccessRegisterActivity.this,HomeActivity.class);
+            startActivity(goToHome);
         });
     }
 }
