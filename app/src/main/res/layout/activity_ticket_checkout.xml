@@ -38,11 +38,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/bg_layout_white"
         android:orientation="vertical"
         android:paddingLeft="24dp"
-        android:paddingTop="30dp"
+        android:paddingTop="24dp"
         android:paddingRight="24dp"
         android:paddingBottom="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -251,7 +251,7 @@
         android:id="@+id/btn_buy_ticket"
         android:layout_width="250dp"
         android:layout_height="55dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/bg_btn_green_primary"
         android:fontFamily="@font/montserrat_medium"
@@ -262,7 +262,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
     <LinearLayout
-        android:id="@+id/btn_back_to_dashboard"
+        android:id="@+id/btn_back_to_ticket_detail"
         android:layout_width="51dp"
         android:layout_height="55dp"
         android:layout_marginTop="24dp"

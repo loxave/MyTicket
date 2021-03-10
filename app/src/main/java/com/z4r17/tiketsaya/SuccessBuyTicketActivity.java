@@ -43,13 +43,13 @@ public class SuccessBuyTicketActivity extends AppCompatActivity {
 
 
         btn_my_dashboard.setOnClickListener(view -> {
-            Intent backtoHome = new Intent(SuccessBuyTicketActivity.this, MyTicketDetailActivity.class);
-            startActivity(backtoHome);
+            Intent goToHome = new Intent(SuccessBuyTicketActivity.this, HomeActivity.class);
+            startActivity(goToHome);
         });
 
         btn_view_ticket.setOnClickListener(view -> {
-            Intent backtoHome2 = new Intent(SuccessBuyTicketActivity.this, HomeActivity.class);
-            startActivity(backtoHome2);
+            Intent goToViewTicket = new Intent(SuccessBuyTicketActivity.this, MyTicketDetailActivity  .class);
+            startActivity(goToViewTicket);
         });
     }
 }

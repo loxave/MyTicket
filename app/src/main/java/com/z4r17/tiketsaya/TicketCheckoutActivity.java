@@ -15,7 +15,7 @@ import android.widget.TextView;
 public class TicketCheckoutActivity extends AppCompatActivity {
 
     Button btn_buy_ticket, btn_minus, btn_plus;
-    LinearLayout btn_back_to_dashboard;
+    LinearLayout btn_back_to_ticket_detail;
     TextView text_ticketTotal, text_myBalance, text_totalCost;
     Integer valueTicketTotal = 1;
     Integer myBalance = 500;
@@ -33,6 +33,7 @@ public class TicketCheckoutActivity extends AppCompatActivity {
         text_ticketTotal = findViewById(R.id.text_ticketTotal);
 
         btn_buy_ticket = findViewById(R.id.btn_buy_ticket);
+        btn_back_to_ticket_detail = findViewById(R.id.btn_back_to_ticket_detail);
         money_notice = findViewById(R.id.money_notice);
 
         text_myBalance = findViewById(R.id.text_myBalance);
@@ -83,10 +84,10 @@ public class TicketCheckoutActivity extends AppCompatActivity {
             }
         });
 
-        btn_back_to_dashboard = findViewById(R.id.btn_back_to_dashboard);
-        btn_back_to_dashboard.setOnClickListener(view -> {
-            Intent backToDashboard = new Intent(TicketCheckoutActivity.this, HomeActivity.class);
-            startActivity(backToDashboard);
+
+        btn_back_to_ticket_detail.setOnClickListener(view -> {
+            Intent backToPreviously = new Intent(TicketCheckoutActivity.this, TicketDetailActivity.class);
+            startActivity(backToPreviously);
         });
 
         btn_buy_ticket.setOnClickListener(view -> {
