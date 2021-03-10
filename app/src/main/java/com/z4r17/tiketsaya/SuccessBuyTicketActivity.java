@@ -3,7 +3,6 @@ package com.z4r17.tiketsaya;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -43,10 +42,10 @@ public class SuccessBuyTicketActivity extends AppCompatActivity {
         app_subtitle.startAnimation(toptothebottom);
 
 
-//        btn_my_dashboard.setOnClickListener(view -> {
-//            Intent backtoHome = new Intent(SuccessBuyTicketActivity.this, HomeActivity.class);
-//            startActivity(backtoHome);
-//        });
+        btn_my_dashboard.setOnClickListener(view -> {
+            Intent backtoHome = new Intent(SuccessBuyTicketActivity.this, MyTicketDetailActivity.class);
+            startActivity(backtoHome);
+        });
 
         btn_view_ticket.setOnClickListener(view -> {
             Intent backtoHome2 = new Intent(SuccessBuyTicketActivity.this, HomeActivity.class);
