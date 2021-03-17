@@ -43,7 +43,6 @@ public class RegisterTwoActivity extends AppCompatActivity {
     String username_key = "";
     String username_key_new = "";
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,16 +57,13 @@ public class RegisterTwoActivity extends AppCompatActivity {
         full_name = findViewById(R.id.full_name);
         bio = findViewById(R.id.bio);
 
-        btn_add_photo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        btn_add_photo.setOnClickListener(view -> {
 
-                //ubah state menjadi loading
-                btn_continue.setEnabled(false);
-                btn_continue.setText("Loading...");
+            //ubah state menjadi loading
+            btn_continue.setEnabled(false);
+            btn_continue.setText("Loading...");
 
-                findPhoto();
-            }
+            findPhoto();
         });
 
         btn_continue.setOnClickListener(view -> {
