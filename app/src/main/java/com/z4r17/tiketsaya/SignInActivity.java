@@ -1,6 +1,7 @@
 package com.z4r17.tiketsaya;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,6 +25,9 @@ public class SignInActivity extends AppCompatActivity {
 
     DatabaseReference reference;
 
+    String USERNAME_KEY = "usernamekey";
+    String username_key = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,11 +50,32 @@ public class SignInActivity extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                      if(snapshot.exists()){
-                         Toast.makeText(getApplicationContext(), "Username ada", Toast.LENGTH_SHORT).show();
 
-                         //berpindah activity
-                         Intent goToHome = new Intent(SignInActivity.this, HomeActivity.class);
-                         startActivity(goToHome);
+                         // ambil data password dari firebase
+                         String passwordFromFirebase = snapshot.child("password").getValue().toString();
+
+                         // validasi password dengan password firebase
+                         if (password.equals(passwordFromFirebase)){
+
+                             // simpan username (key) kepada local
+                             SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY, MODE_PRIVATE);
+                             SharedPreferences.Editor editor = sharedPreferences.edit();
+                             editor.putString(username_key, xusername.getText().toString();
+                             editor.apply();
+
+                             //berpindah activity
+                             Intent goToHome = new Intent(SignInActivity.this, HomeActivity.class);
+                             startActivity(goToHome);
+                         } else {
+                             Toast.makeText(getApplicationContext(), "Password salah", Toast.LENGTH_SHORT).show();
+                         }
+
+                        //setelah username ada perlu simpan ke storage local
+                         // ketika data usernamenya ada perlu cek dulu
+                         // toast dihapus karena username sudah ada (masuk)
+//                         Toast.makeText(getApplicationContext(), "Username ada", Toast.LENGTH_SHORT).show();
+
+
                      }
                     else {
                          Toast.makeText(getApplicationContext(), "Username tidak ada!", Toast.LENGTH_SHORT).show();
