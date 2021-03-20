@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,7 +22,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 public class RegisterTwoActivity extends AppCompatActivity {
@@ -58,15 +56,15 @@ public class RegisterTwoActivity extends AppCompatActivity {
         bio = findViewById(R.id.bio);
 
         btn_add_photo.setOnClickListener(view -> {
+            findPhoto();
+        });
+
+        btn_continue.setOnClickListener(view -> {
 
             //ubah state menjadi loading
             btn_continue.setEnabled(false);
             btn_continue.setText("Loading...");
 
-            findPhoto();
-        });
-
-        btn_continue.setOnClickListener(view -> {
             //menyimpan pada firebase
             reference  = FirebaseDatabase.getInstance().getReference().child("Users").child(username_key_new);
             storage = FirebaseStorage.getInstance().getReference().child("Photousers").child(username_key_new);
@@ -77,11 +75,7 @@ public class RegisterTwoActivity extends AppCompatActivity {
                         storage.child(System.currentTimeMillis() + "." +
                                 getFileExtension(photo_location));
                 storageReference.putFile(photo_location)
-                        .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-
-                        storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                        .addOnSuccessListener(taskSnapshot -> storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                             @Override
                             public void onSuccess(Uri uri) {
 
@@ -89,7 +83,6 @@ public class RegisterTwoActivity extends AppCompatActivity {
                                 reference.getRef().child("url_photo_profile").setValue(uri_photo);
                                 reference.getRef().child("nama_lengkap").setValue(full_name);
                                 reference.getRef().child("bio").setValue(bio);
-
                             }
                         }).addOnCompleteListener(new OnCompleteListener<Uri>() {
                             @Override
@@ -99,15 +92,8 @@ public class RegisterTwoActivity extends AppCompatActivity {
                                 startActivity(goToSuccess);
                                 finish();
                             }
+                        })).addOnCompleteListener(task -> {
                         });
-
-                    }
-                }).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-
-                    }
-                });
             }
         });
 

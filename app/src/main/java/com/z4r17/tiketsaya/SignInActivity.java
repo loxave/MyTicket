@@ -38,14 +38,38 @@ public class SignInActivity extends AppCompatActivity {
         xusername = findViewById(R.id.xusername);
         xpassword = findViewById(R.id.xpassword);
 
+
+        btn_new_account.setOnClickListener(view -> {
+            Intent gotoRegisterOne = new Intent(SignInActivity.this, RegisterOneActivity.class);
+            startActivity(gotoRegisterOne);
+        });
+
         btn_sign_in.setOnClickListener(view -> {
 
+            // ubah state menjadi loading
+            btn_sign_in.setEnabled(false);
+            btn_sign_in.setText("Loading ...");
+
            final String username = xusername.getText().toString();
-            String password = xpassword.getText().toString();
+           final String password = xpassword.getText().toString();
 
-            reference  = FirebaseDatabase.getInstance().getReference().child("Users")
-                    .child(username);
+           if(username.isEmpty()){
+               Toast.makeText(getApplicationContext(),"Username kosong", Toast.LENGTH_SHORT).show();
 
+               //ubah state menjadi loading
+               btn_sign_in.setEnabled(true);
+               btn_sign_in.setText("SIGN IN");
+           } else {
+               if (password.isEmpty()){
+                   Toast.makeText(getApplicationContext(),"Password kosong!", Toast.LENGTH_SHORT).show();
+                   btn_sign_in.setEnabled(true);
+                   btn_sign_in.setText("SIGN IN");
+               } else {
+
+                   reference  = FirebaseDatabase.getInstance().getReference().child("Users")
+                           .child(username);
+               }
+           }
             reference.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -68,13 +92,13 @@ public class SignInActivity extends AppCompatActivity {
                              startActivity(goToHome);
                          } else {
                              Toast.makeText(getApplicationContext(), "Password salah", Toast.LENGTH_SHORT).show();
+                             btn_sign_in.setEnabled(true);
+                             btn_sign_in.setText("SIGN IN");
                          }
-
                         //setelah username ada perlu simpan ke storage local
                          // ketika data usernamenya ada perlu cek dulu
                          // toast dihapus karena username sudah ada (masuk)
 //                         Toast.makeText(getApplicationContext(), "Username ada", Toast.LENGTH_SHORT).show();
-
 
                      }
                     else {
@@ -89,9 +113,5 @@ public class SignInActivity extends AppCompatActivity {
 
         });
 
-        btn_new_account.setOnClickListener(view -> {
-            Intent gotoRegisterOne = new Intent(SignInActivity.this, RegisterOneActivity.class);
-            startActivity(gotoRegisterOne);
-        });
     }
 }

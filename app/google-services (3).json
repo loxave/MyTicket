@@ -8,12 +8,20 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:745068516719:android:205ac58cd889d55274c49a",
+        "mobilesdk_app_id": "1:745068516719:android:7e96fc3f35cc68cd74c49a",
         "android_client_info": {
           "package_name": "com.z4r17.tiketsaya"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "745068516719-f5ksn5edalsv1hle5m3eme00dl68b5pg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.z4r17.tiketsaya",
+            "certificate_hash": "1035c204f0a454c451908d4296863b74ea532e93"
+          }
+        },
         {
           "client_id": "745068516719-4r7q5fo1qdsr5e1h5c01idq38j4haco9.apps.googleusercontent.com",
           "client_type": 3
